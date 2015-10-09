@@ -36,6 +36,11 @@ import com.flurry.android.ads.FlurryAdNativeAsset;
 import com.flurry.android.ads.FlurryAdNativeListener;
 import com.rjfun.cordova.ad.GenericAdPlugin;
 
+import java.io.ByteArrayOutputStream;
+import android.graphics.Bitmap;
+import android.util.Base64;
+import android.graphics.BitmapFactory;
+
 public class FlurryAdPlugin extends GenericAdPlugin {
     private static final String LOGTAG = "FlurryAdPlugin";
 
