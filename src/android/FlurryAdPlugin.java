@@ -534,10 +534,14 @@ public class FlurryAdPlugin extends GenericAdPlugin {
 					if(asset != null) {
 						JSONObject img = new JSONObject();
 						img.put("url", asset.getValue());
-						img.put("type", asset.getType());
+						
 						img.put("width", 1200);
 						img.put("height", 627);
 						adRes.put("secHqImage", img);
+						BitmapFactory.Options options = new BitmapFactory.Options();
+						options.inPreferredConfig = Bitmap.Config.ARGB_8888;
+						Bitmap bitmap = BitmapFactory.decodeFile(asset.getValue(), options);
+						img.put("type", bitmapToBase64(bitmap));
 					}
 
 					asset = ad.getAsset("secImage");
@@ -583,6 +587,13 @@ public class FlurryAdPlugin extends GenericAdPlugin {
             }
 	    });
     }
+    
+    private String bitmapToBase64(Bitmap bitmap) {
+    ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+    bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
+    byte[] byteArray = byteArrayOutputStream .toByteArray();
+    return Base64.encodeToString(byteArray, Base64.DEFAULT);
+}
     
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	public void setNativeAdClickArea(final String adId, int x, int y, int w, int h) {
