@@ -534,6 +534,7 @@ public class FlurryAdPlugin extends GenericAdPlugin {
 					if(asset != null) {
 						JSONObject img = new JSONObject();
 						img.put("url", asset.getValue());
+						img.put("type", asset.getType());
 						img.put("width", 1200);
 						img.put("height", 627);
 						adRes.put("secHqImage", img);
