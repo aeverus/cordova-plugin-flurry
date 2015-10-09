@@ -12,7 +12,7 @@
 #import "FlurryAds.h"
 #import "FlurryAdDelegate.h"
 
-#define TEST_APIKEY  @"ZJ4WPD53SR3ZSV22BBDK"
+#define TEST_APIKEY  @"DHDG24QKX28M7858WG2M"
 
 #define AD_INTERSTITIAL     @"INTERSTITIAL_MAIN_VIEW"
 #define AD_BANNER_TOP       @"TOP_BANNER"
