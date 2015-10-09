@@ -44,7 +44,7 @@ public class FlurryAdPlugin extends GenericAdPlugin {
     private static final String AD_INTERSTITIAL = "INTERSTITIAL_MAIN_VIEW";
     private static final String AD_NATIVE = "NATIVE_AD";
     
-    private static final String TEST_APIKEY = "G56KN4J49YT66CFRD5K6";
+    private static final String TEST_APIKEY = "ZJ4WPD53SR3ZSV22BBDK";
 
     private boolean inited = false;
     private String adSpace = AD_BOTTOM_BANNER;
